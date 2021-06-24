@@ -29,7 +29,7 @@ public abstract class BaseTest {
         this.driver.manage().window().maximize();
 
         // 4. Nav home
-        this.driver.get("https://www.bunnings.com.au/"); // config
+        this.driver.get("https://www.bunnings.com.au/login?redirectUri=https%3A%2F%2Flogin.bunnings.com.au%2Foauth2%2Fv1%2Fauthorize%2Fredirect%3Fokta_key%3DUa2XHdAfwC9wZuVTeZRcFG2SWL1AP6KJQKQlyZiqg68"); // config
     }
 
     @AfterEach
