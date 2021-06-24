@@ -17,4 +17,14 @@ public abstract class BasePage<T> {
         }
         return driver.findElement(By.className("cartItemCount")).getText();
     }
+
+    public HomePage clickSigninmenu() {
+        driver.findElement(By.id("icon-account")).click();
+        return new HomePage(driver);
+    }
+
+    public LoginPage clickSigninbutton() {
+        driver.findElement(By.className("WtNgf")).click();
+        return new LoginPage(driver);
+    }
 }
