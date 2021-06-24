@@ -2,7 +2,6 @@ package com.planittesting.bunning.model.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.By.ByCssSelector;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage<LoginPage> {
@@ -28,7 +27,18 @@ public class LoginPage extends BasePage<LoginPage> {
 
   public String getDetailsError() {
     return new WebDriverWait(driver, 30).until(d -> d.findElement(By.className("infobox-error")).getText());
+  }
 
+  public String getEmailError() {
+    return driver.findElement(By.id("input-container-error53")).getText();
+  }
+
+  public String getPasswordError() {
+    return driver.findElement(By.id("input-container-error54")).getText();
+  }
+
+  public String getPasswordErrorWithPasswordButNoEmail() {
+    return driver.findElement(By.id("input-container-error53")).getText();
   }
 
 }
