@@ -1,5 +1,6 @@
 package com.planittesting.bunning.model.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public abstract class BasePage<T> {
@@ -8,5 +9,9 @@ public abstract class BasePage<T> {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public String getCartCount() {
+        return driver.findElement(By.className("cartItemCount")).getText();
     }
 }
