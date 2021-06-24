@@ -14,4 +14,14 @@ public class HomePage extends BasePage<HomePage> {
     return this;
   }
 
+  public HomePage incrementItemQuantityByOne() {
+    driver.findElement(By.className("addQtyButton")).click();
+    return this;
+  }
+
+  public HomePage decrementItemQuantityByOne() {
+    driver.findElement(By.className("subtractQtyButton")).click();
+    return this;
+  }
+
 }

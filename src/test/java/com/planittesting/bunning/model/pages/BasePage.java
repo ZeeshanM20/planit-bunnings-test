@@ -12,6 +12,9 @@ public abstract class BasePage<T> {
     }
 
     public String getCartCount() {
+        if (driver.findElements(By.className("cartItemCount")).size() == 0) {
+            return null;
+        }
         return driver.findElement(By.className("cartItemCount")).getText();
     }
 }
